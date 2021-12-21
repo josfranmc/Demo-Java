@@ -8,12 +8,12 @@
     <artifactId>demo-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-
   <artifactId>demo-jpa</artifactId>
-
   <packaging>jar</packaging>
+
   <name>Demo-JPA</name>
   <description>JPA usage demo</description>
+  <url>https://github.com/josfranmc/Demo-Java/edit/main/demo-jpa</url>
 
   <properties>
     <project.build.mainClass>org.josfranmc.demo.jpa.Main</project.build.mainClass>
@@ -25,10 +25,10 @@
       <artifactId>hsqldb</artifactId>
       <version>2.5.1</version>
     </dependency>
-	<dependency>
+    <dependency>
       <groupId>org.hibernate</groupId>
-	  <artifactId>hibernate-entitymanager</artifactId>
-	  <version>5.4.23.Final</version>
-	</dependency>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.4.23.Final</version>
+    </dependency>
   </dependencies>
 </project>
