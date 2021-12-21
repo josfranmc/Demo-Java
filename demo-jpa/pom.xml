@@ -13,7 +13,7 @@
 
   <name>Demo-JPA</name>
   <description>JPA usage demo</description>
-  <url>https://github.com/josfranmc/Demo-Java/edit/main/demo-jpa</url>
+  <url>https://github.com/josfranmc/Demo-Java/tree/main/demo-jpa</url>
 
   <properties>
     <project.build.mainClass>org.josfranmc.demo.jpa.Main</project.build.mainClass>
