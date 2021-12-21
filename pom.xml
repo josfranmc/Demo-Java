@@ -9,7 +9,7 @@
   
   <name>Demo-Java</name>
   <description>Proyecto padre para ejemplos en Java.</description>
-  <url>https://github.com/josfranmc</url>
+  <url>https://github.com/josfranmc/Demo-Java</url>
 
   <modules>
     <module>demo-jpa</module>
