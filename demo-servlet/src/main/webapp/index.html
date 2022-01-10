@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=”es”>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=”description” content="Demo servlet usage">
+    <link rel="stylesheet" type="text/css" href="css/formato.css" />
+    <title>Demo Servlet</title>
+</head>
+<body>
+    <fieldset>
+    <legend>Ejemplo de llamada a servlets (GET)</legend>
+
+	  <ul>
+        <li><a href="demoWebXml">Llamar a servlet definido en fichero web.xml</a></li>
+        <li><a href="demoAnnotation">Llamar a servlet definido mediante anotaciones</a></li>
+	  </ul>
+    </fieldset>
+    
+    <fieldset>
+    <legend>Ejemplo de llamada a servlets (POST)</legend>
+      <p>
+	  <a href="demoWebXml">Llamar a servlet definido en fichero web.xml</a>
+	  <br>
+      <form action="demoWebXml" method="post">
+          <label for="mensaje">Mensaje:</label>
+          <input type="text" name="mensaje">
+          <input type="submit" value="enviar">
+      </form>
+      <p>
+      <a href="demoAnnotation">Llamar a servlet definido mediante anotaciones</a>
+	  <br>
+      <form action="demoAnnotation" method="post">
+          <label for="mensaje">Mensaje:</label>
+          <input type="text" name="mensaje">
+          <input type="submit" value="enviar">
+      </form>
+    </fieldset>    
+</body>
