@@ -50,7 +50,7 @@ public class DemoServletAnnotation extends HttpServlet {
     	pw.println ("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/formato.css\" />");
     	pw.println ("</head>");
     	pw.println ("<body>");
-        pw.println("Respuesta del servlet registrado en fichero web.xml<br>");
+        pw.println("Respuesta del servlet registrado con anotaciones.<br>");
         pw.println("Mensaje recibido: " + mensaje  + "<br>");
         pw.println("<a href=\"javascript: history.go(-1)\">Volver</a>");    	
     	pw.println ("</body>");
