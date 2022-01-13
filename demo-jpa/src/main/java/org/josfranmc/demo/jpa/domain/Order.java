@@ -40,7 +40,7 @@ public class Order {
 	private Client client;
 	
 	@ManyToMany(cascade=CascadeType.ALL)
-	@JoinTable(name = "orders_items", 
+	@JoinTable(name = "orders_items",
 			   joinColumns = @JoinColumn(name = "order_id", nullable = false), 
 			   inverseJoinColumns = @JoinColumn(name = "item_id", nullable = false))
 	private List<Item> items;
@@ -97,6 +97,11 @@ public class Order {
 			this.items.remove(item);
 			item.removeOrder(this);	
 		}		
+	}
+	
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", price=" + price + "]";
 	}
 	
 	@Override

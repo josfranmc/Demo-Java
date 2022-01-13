@@ -138,10 +138,11 @@ public class Main {
 	
 	private static void findObjets(EntityManager entityManager) {
 		Order order = entityManager.find(Order.class, 2L);
-       	logger.info(" Order " + order.getId() + " " + order.getPrice());
+       	logger.info(order.toString());
         for (Item item : order.getItems()) {
-        	logger.info("         " + item.getId() + " \"" + item.getDescription() + "\"");
-        }	
+        	logger.info("\t" + item.toString());
+        }
+        logger.info("\t" + order.getClient().toString());
 	}
 	
 	private static void queryDataSQLwithJDBC(String sqlQuery) {
@@ -187,7 +188,7 @@ public class Main {
     	List<Item> items = query.getResultList();
         for (Item item : items) {
         	String text = "   ID: " + item.getId() + "    DESCRIPTION: " + item.getDescription();
-        	logger.info(text);
+        	logger.info(item.toString());
         }	
         
     	query = entityManager.createNativeQuery("SELECT name FROM clients");
