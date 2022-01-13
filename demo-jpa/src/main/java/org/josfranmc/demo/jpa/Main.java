@@ -87,22 +87,26 @@ public class Main {
         	entityManager.persist(client02);
         	transaction.commit();
         	
-           	transaction = entityManager.getTransaction();
-        	
         	logger.info("-----------------------------------------------------------");
         	logger.info("[DEMOJPA] Domain data:");
-        	printDomainObject(client01);
-        	printDomainObject(client02);
+        	printDomainObjects(client01);
+        	printDomainObjects(client02);
         	logger.info("-----------------------------------------------------------");
-        	logger.info("[DEMOJPA] Query Database Data using SQL:");
+        	logger.info("[DEMOJPA] Find objects using EntityManager:");
+        	findObjets(entityManager);
+        	logger.info("-----------------------------------------------------------");
+        	logger.info("[DEMOJPA] Query Data using SQL with JDBC:");
         	logger.info("   Clients table:");
-        	queryDataSQL("SELECT * FROM clients");
+        	queryDataSQLwithJDBC("SELECT * FROM clients");
         	logger.info("   Orders table:");
-        	queryDataSQL("SELECT * FROM orders");
+        	queryDataSQLwithJDBC("SELECT * FROM orders");
         	logger.info("   Items table:");
-        	queryDataSQL("SELECT * FROM items");       
+        	queryDataSQLwithJDBC("SELECT * FROM items");       
         	logger.info("   Orders_Items table:");
-        	queryDataSQL("SELECT * FROM orders_items"); 
+        	queryDataSQLwithJDBC("SELECT * FROM orders_items"); 
+        	logger.info("-----------------------------------------------------------");
+        	logger.info("[DEMOJPA] Query Data using NativeQuery");
+        	queryNativeQuery(entityManager);
         	logger.info("-----------------------------------------------------------");
         	logger.info("[DEMOJPA] Query Data using JPQL:");
         	queryDataJPQL(entityManager);
@@ -122,17 +126,25 @@ public class Main {
         }
 	}
 	
-	private static void printDomainObject(Client client) {
+	private static void printDomainObjects(Client client) {
         logger.info(client.getId() + " " + client.getName() + " -> ");
         for (Order order : client.getOrders()) {
-        	logger.info("  " + order.getId() + " " + order.getPrice());
+        	logger.info(" Order " + order.getId() + " " + order.getPrice());
         	for (Item item : order.getItems()) {
-        		logger.info("    " + item.getId() + " " + item.getDescription());
+        		logger.info("         " + item.getId() + " \"" + item.getDescription() + "\"");
         	}
          }
 	}
 	
-	private static void queryDataSQL(String sqlQuery) {
+	private static void findObjets(EntityManager entityManager) {
+		Order order = entityManager.find(Order.class, 2L);
+       	logger.info(" Order " + order.getId() + " " + order.getPrice());
+        for (Item item : order.getItems()) {
+        	logger.info("         " + item.getId() + " \"" + item.getDescription() + "\"");
+        }	
+	}
+	
+	private static void queryDataSQLwithJDBC(String sqlQuery) {
 		try {
 			Connection connection = new DbConnection().getConnection();
 	        
@@ -168,6 +180,23 @@ public class Main {
         System.out.println(text);
     }
     
+	@SuppressWarnings("unchecked")
+	private static void queryNativeQuery(EntityManager entityManager) {
+		//Si el resultado de la select coincide con el de la entidad se puede mapear directamente indicando el nombre de la misma
+    	Query query = entityManager.createNativeQuery("SELECT * FROM items WHERE id < 4", Item.class);
+    	List<Item> items = query.getResultList();
+        for (Item item : items) {
+        	String text = "   ID: " + item.getId() + "    DESCRIPTION: " + item.getDescription();
+        	logger.info(text);
+        }	
+        
+    	query = entityManager.createNativeQuery("SELECT name FROM clients");
+    	List<String> clients = query.getResultList();
+        for (String client : clients) {
+        	logger.info("   NAME: " + client);
+        }	
+	}
+	
 	private static void queryDataJPQL(EntityManager entityManager) {
     	Query query = entityManager.createQuery("Select c from Client c where c.name = :name");
     	query.setParameter("name", "Jane Doe");
