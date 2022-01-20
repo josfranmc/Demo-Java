@@ -187,7 +187,6 @@ public class Main {
     	Query query = entityManager.createNativeQuery("SELECT * FROM items WHERE id < 4", Item.class);
     	List<Item> items = query.getResultList();
         for (Item item : items) {
-        	String text = "   ID: " + item.getId() + "    DESCRIPTION: " + item.getDescription();
         	logger.info(item.toString());
         }	
         
