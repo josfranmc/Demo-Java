@@ -6,3 +6,5 @@ Ejemplos en Java.
 - **demo-jpa**: utilizar JPA con una base de datos local
 
 - **demo-servlet**: ejemplo sencillo de uso de servlets
+
+- **pattern-decorator**: ejemplo de uso patrón Decorator
