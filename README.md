@@ -8,3 +8,5 @@ Ejemplos en Java.
 - **demo-servlet**: ejemplo sencillo de uso de servlets
 
 - **pattern-decorator**: ejemplo de uso patrón Decorator
+
+- **pattern-strategy**: ejemplo de uso patrón Strategy
