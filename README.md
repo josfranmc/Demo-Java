@@ -9,4 +9,6 @@ Ejemplos en Java.
 
 - **pattern-decorator**: ejemplo de uso patrón Decorator
 
+- **pattern-singleton**: ejemplo de uso patrón Singleton
+
 - **pattern-strategy**: ejemplo de uso patrón Strategy
