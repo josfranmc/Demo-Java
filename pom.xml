@@ -16,6 +16,7 @@
     <module>demo-jpa-dao</module>
     <module>demo-servlet</module>
     <module>pattern-decorator</module>
+    <module>pattern-factory-method</module>
     <module>pattern-singleton</module>
     <module>pattern-strategy</module>
   </modules>
