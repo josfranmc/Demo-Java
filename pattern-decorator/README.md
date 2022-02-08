@@ -1,4 +1,4 @@
-# Demo-Java
+# Pattern-Decorator
 Ejemplos de uso del patrón Decorator.  
 
 El objetivo es agregar funcionalidades a un objeto principal de forma dinámica, evitando la necesidad de crear subclases de la clase a la que pertenece dicho objeto.  

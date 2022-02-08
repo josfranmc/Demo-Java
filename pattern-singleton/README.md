@@ -1,4 +1,4 @@
-# Demo-Java
+# Pattern-Singleton
 Ejemplos de uso del patrón Singleton. Se exponen varias implementaciones.    
 
 Mediante este patrón se garantiza que tan solo exista un objeto de una clase determinada al mismo tiempo que proporciona un única forma de creación del mismo.  
