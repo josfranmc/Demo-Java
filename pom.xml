@@ -5,7 +5,7 @@
   <artifactId>demo-java</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  
+
   <name>Demo-Java</name>
   <description>Proyecto padre para ejemplos en Java.</description>
   <url>https://github.com/josfranmc/Demo-Java</url>
@@ -13,8 +13,8 @@
   <modules>
     <module>demo-cdi</module>
     <module>demo-jpa</module>
-    <module>demo-jpa-dao</module>
     <module>demo-servlet</module>
+    <module>pattern-dao-jdbc</module>
     <module>pattern-decorator</module>
     <module>pattern-factory-method</module>
     <module>pattern-singleton</module>
