@@ -7,6 +7,8 @@ Ejemplos en Java.
 
 - **demo-servlet**: ejemplo sencillo de uso de servlets
 
+- **pattern-dao-jdbc**: ejemplo de uso patrón DAO utilizando JDBC
+
 - **pattern-decorator**: ejemplo de uso patrón Decorator
 
 - **pattern-factory-method**: ejemplo de uso patrón Factory Method
