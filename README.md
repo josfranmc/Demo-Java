@@ -1,6 +1,8 @@
 # Demo-Java
 Ejemplos en Java.  
 
+- **dbconnection**: obtener conexiones a una base de datos
+
 - **demo-cdi**: uso de inyección de dependencias utilizando Weld como implementación de Jakarta CDI
 
 - **demo-jpa**: utilizar JPA con una base de datos local
@@ -16,3 +18,5 @@ Ejemplos en Java.
 - **pattern-singleton**: ejemplo de uso patrón Singleton
 
 - **pattern-strategy**: ejemplo de uso patrón Strategy
+
+- **properties-files**: como leer ficheros de propiedades

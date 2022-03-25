@@ -11,6 +11,7 @@
   <url>https://github.com/josfranmc/Demo-Java</url>
 
   <modules>
+    <module>dbconnection</module>
     <module>demo-cdi</module>
     <module>demo-jpa</module>
     <module>demo-servlet</module>
