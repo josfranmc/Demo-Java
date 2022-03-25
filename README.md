@@ -3,6 +3,8 @@ Ejemplos en Java.
 
 - **dbconnection**: obtener conexiones a una base de datos
 
+- **dbconnectionbuilder**: obtener conexiones a diferentes bases de datos utilizando un patrón Builder.
+
 - **demo-cdi**: uso de inyección de dependencias utilizando Weld como implementación de Jakarta CDI
 
 - **demo-jpa**: utilizar JPA con una base de datos local

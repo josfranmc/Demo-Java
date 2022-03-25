@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.josfranmc.demo</groupId>
+    <artifactId>demo-java</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>dbconnectionbuilder</artifactId>
+
+  <name>DbConnectionBuilder</name>
+  <description>Permite obtener conexiones a diferentes bases de datos. Se implementa mediante un patrón Builder.</description>
+
+  <dependencies>  
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>2.5.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.josfranmc</groupId>
+      <artifactId>files</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.27</version>
+    </dependency>
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>42.2.24</version>
+	</dependency>
+	<dependency>
+	    <groupId>net.sf.ucanaccess</groupId>
+	    <artifactId>ucanaccess</artifactId>
+	    <version>5.0.1</version>
+	</dependency>     
+  </dependencies>
+</project>

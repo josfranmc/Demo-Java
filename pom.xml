@@ -12,6 +12,7 @@
 
   <modules>
     <module>dbconnection</module>
+    <module>dbconnectionbuilder</module>
     <module>demo-cdi</module>
     <module>demo-jpa</module>
     <module>demo-servlet</module>
