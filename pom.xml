@@ -19,6 +19,7 @@
     <module>pattern-factory-method</module>
     <module>pattern-singleton</module>
     <module>pattern-strategy</module>
+    <module>properties-files</module>
   </modules>
 
   <properties>
