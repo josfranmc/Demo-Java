@@ -11,6 +11,8 @@ Ejemplos en Java.
 
 - **demo-servlet**: ejemplo sencillo de uso de servlets
 
+- **hsqldbserverbuilder**: wrapper para manejar de forma sencilla bases de datos en HSQLDBserver
+
 - **pattern-dao-jdbc**: ejemplo de uso patrón DAO utilizando JDBC
 
 - **pattern-decorator**: ejemplo de uso patrón Decorator
