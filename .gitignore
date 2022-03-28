@@ -2,7 +2,7 @@
 .project
 .classpath
 target/
-db/
+database/
 log/
 bin/
 

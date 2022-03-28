@@ -16,6 +16,7 @@
     <module>demo-cdi</module>
     <module>demo-jpa</module>
     <module>demo-servlet</module>
+    <module>hsqldbserverbuilder</module>
     <module>pattern-dao-jdbc</module>
     <module>pattern-decorator</module>
     <module>pattern-factory-method</module>
