@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class DbConnection {
 	
-	private static final String DEFAULT_SETTING_FILE = "db/DbConnection.properties";
+	private static final String DEFAULT_SETTING_FILE = "database/DbConnection.properties";
 	
 	private String driver;
 
